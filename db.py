@@ -12,6 +12,6 @@ def get_connect_cloudSql():
     return conn
 
 def get_connect_mongoDB():
-    connect_db = "mongodb+srv://tonystank:i1024166@cluster0.kck47.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    connect_db = "mongodb+srv://username:******@cluster0.kck47.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     cluster = MongoClient(connect_db)
     return cluster
