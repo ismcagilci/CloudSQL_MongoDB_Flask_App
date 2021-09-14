@@ -5,7 +5,7 @@ from db import get_connect_cloudSql,get_connect_mongoDB
 app = Flask(__name__)
 
 @app.route('/insert', methods=['POST', 'GET'])
-def add_user_cloud():
+def add_data_cloud():
     if request.method == 'POST':
         conn = get_connect()
         cnx = conn.cursor()
@@ -17,7 +17,7 @@ def add_user_cloud():
         return "<p>Hello, World!</p>"
 
 @app.route('/insertMongo', methods=['POST', 'GET'])
-def add_user_mongo():
+def add_data_mongo():
     if request.method == 'POST':
         conn = get_connect_mongoDB()
         myDB = conn["airbnbDB"]
